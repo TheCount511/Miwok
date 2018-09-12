@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/list_item_height"
+    android:orientation="horizontal"
+    android:background="@color/tan_background"
+    >
+
+     <ImageView
+        android:contentDescription="@string/image_description"
+        android:id="@+id/imageResource"
+        style="@style/IconsStyle"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <!--<FrameLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/imageResource"
+        >-->
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/imageResource"
+        >
+       <!-- android:background="?android:attr/selectableItemBackground"-->
+
+        <TextView
+            android:id="@+id/miwokWords"
+            style="@style/WordsStyle"
+            tools:text="lutti"/>
+        <TextView
+            android:id="@+id/englishWords"
+            style="@style/TranslatedWordsStyle"
+            tools:text="one"/>
+
+    </LinearLayout>
+    <!--</FrameLayout>-->
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_play_arrow_white_24dp"/>
+
+
+</RelativeLayout>
